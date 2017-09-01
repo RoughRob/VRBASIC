@@ -8,6 +8,7 @@ public class BuildTower : MonoBehaviour
 
     public Mesh firstMesh;
     public Mesh midMesh;
+    public Mesh mid2Mesh;
     public Mesh finalMesh;
 
     public GameObject Hammer;
@@ -15,7 +16,8 @@ public class BuildTower : MonoBehaviour
     public Vector3 hammerLocation;
     public float hammerRotation = 60f;
 
-    public float waitTime = 5.0f;
+    public float waitTime = 4.0f;
+    public float waitTime2 = 6.0f;
     public float hammerWaitTime = 8.0f;
 
 
@@ -29,6 +31,7 @@ public class BuildTower : MonoBehaviour
         GetComponent<MeshFilter>().sharedMesh = firstMesh;
 
         startDelay = false;
+        Hammer.SetActive(false);
     }
 
     // Update is called once per frame
@@ -46,6 +49,13 @@ public class BuildTower : MonoBehaviour
         {
             waitTime -= Time.deltaTime;
             if (waitTime <= 0.0f)
+            {
+                GetComponent<MeshFilter>().sharedMesh = mid2Mesh;
+
+            }
+
+            waitTime2 -= Time.deltaTime;
+            if (waitTime2 <= 0.0f)
             {
                 GetComponent<MeshFilter>().sharedMesh = finalMesh;
 
