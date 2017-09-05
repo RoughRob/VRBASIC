@@ -6,7 +6,8 @@ public class EnemySpawn : MonoBehaviour {
 
     public GameObject enemy;
     public int enemyCount;
-    public float rate = 1.0f;
+    public float rate = 1.0f, xStart, xEnd, yStart, yEnd, zStart, zEnd;
+    public float enemyXRotation, enemyYRotation, enemyZRotation, enemyWRotation;
 
     // Use this for initialization
     void Start ()
@@ -22,8 +23,12 @@ public class EnemySpawn : MonoBehaviour {
     IEnumerator Spawn()
     {
         while(true)
-        { 
-            Instantiate(enemy, new Vector3((float)-5.72, (float)-0.13, Random.Range(-2.0f, 3.0f)), Quaternion.identity);
+        {
+            float x = Random.Range(xStart, xEnd);
+            float y = Random.Range(yStart, yEnd);
+            float z = Random.Range(zStart, zEnd);
+            Quaternion rotationOfEnemy = new Quaternion(enemyXRotation, enemyYRotation, enemyZRotation, enemyWRotation);
+            Instantiate(enemy, new Vector3(x, y, z), rotationOfEnemy);
             yield return new WaitForSeconds(rate);
         }
     }
