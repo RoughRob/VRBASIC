@@ -778,7 +778,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 558091240}
   m_LocalRotation: {x: -0, y: -0.94909745, z: -0, w: 0.31498262}
-  m_LocalPosition: {x: -6.6082, y: 4.4747, z: 1.8453}
+  m_LocalPosition: {x: -7.13, y: 4.4747, z: 2.23}
   m_LocalScale: {x: 0.79649854, y: 0.7964981, z: 0.7964992}
   m_Children:
   - {fileID: 1151982834}
@@ -1662,7 +1662,7 @@ GameObject:
   - component: {fileID: 1087993987}
   - component: {fileID: 1087993986}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Spawning
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1682,6 +1682,16 @@ MonoBehaviour:
   enemy: {fileID: 558091240}
   enemyCount: 0
   rate: 1
+  xStart: 0
+  xEnd: 0
+  yStart: 0
+  yEnd: 0
+  zStart: 0
+  zEnd: 0
+  enemyXRotation: 0
+  enemyYRotation: 0
+  enemyZRotation: 0
+  enemyWRotation: 0
 --- !u!4 &1087993987
 Transform:
   m_ObjectHideFlags: 0
