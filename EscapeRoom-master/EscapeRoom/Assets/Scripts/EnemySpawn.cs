@@ -6,8 +6,8 @@ public class EnemySpawn : MonoBehaviour {
 
     public GameObject enemy;
     public int enemyCount;
-    public float rate = 1.0f;
-    public float velocityX, velocityY, velocityZ;
+    public float rate = 1.0f, xStart, xEnd, yStart, yEnd, zStart, zEnd;
+    public float enemyXRotation, enemyYRotation, enemyZRotation, enemyWRotation;
 
     // Use this for initialization
     void Start ()
@@ -24,8 +24,11 @@ public class EnemySpawn : MonoBehaviour {
     {
         while(true)
         {
-            Instantiate(enemy, gameObject.transform.localPosition, gameObject.transform.localRotation);
-            enemy.GetComponent<Rigidbody>().velocity = new Vector3 (velocityX, velocityY, velocityZ);
+            float x = Random.Range(xStart, xEnd);
+            float y = Random.Range(yStart, yEnd);
+            float z = Random.Range(zStart, zEnd);
+            Quaternion rotationOfEnemy = new Quaternion(enemyXRotation, enemyYRotation, enemyZRotation, enemyWRotation);
+            Instantiate(enemy, new Vector3(x, y, z), rotationOfEnemy);
             yield return new WaitForSeconds(rate);
         }
     }
