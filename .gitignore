@@ -33,6 +33,8 @@ sysinfo.txt
 ehthumbs.db
 [Tt]humbs.db
 [Dd]esktop.ini
-EscapeRoom-master/EscapeRoom/Assets/Scripts/EnemySpawn.cs
-EscapeRoom-master/EscapeRoom/Assets/Room.unity
-*.unity
+EscapeRoom-master/EscapeRoom/Library/ScriptAssemblies/Assembly-CSharp.dll
+*.csproj
+EscapeRoom-master/EscapeRoom/Library/assetDatabase3
+EscapeRoom-master/EscapeRoom/Library/EditorInstance.json
+EscapeRoom-master/EscapeRoom/Library/InspectorExpandedItems.asset
